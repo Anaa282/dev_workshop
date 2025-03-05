@@ -1,4 +1,5 @@
 import pytest
+
 from src.data.data import Data
 
 class TestData:
