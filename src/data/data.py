@@ -103,6 +103,7 @@ class Data:
             return lista
         
         k = k % len(lista)
+        
         return lista[-k:] + lista[:-k]
         pass
     
@@ -116,6 +117,13 @@ class Data:
         Returns:
             int: El número que falta en la secuencia
         """
+       
+        n = len(lista) + 1
+
+        suma1 = n*(n+1)/2
+        suma2 = sum(lista)
+
+        return suma1-suma2
         pass
     
     def es_subconjunto(self, conjunto1, conjunto2):
