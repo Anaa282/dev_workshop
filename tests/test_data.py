@@ -2,7 +2,7 @@ import pytest
 
 from src.data.data import Data
 
-"python -m pytest tests/test_data.py"
+
 class TestData:
     def setup_method(self):
         self.data = Data()
