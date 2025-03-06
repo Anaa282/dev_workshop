@@ -99,6 +99,11 @@ class Data:
         Returns:
             list: Lista rotada
         """
+        if not lista:
+            return lista
+        
+        k = k % len(lista)
+        return lista[-k:] + lista[:-k]
         pass
     
     def encuentra_numero_faltante(self, lista):
