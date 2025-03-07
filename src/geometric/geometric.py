@@ -285,7 +285,7 @@ class Geometria:
         suma_b = 2 * pi * (radio** 2)
         suma_l = 2 * pi * radio * altura
 
-        return round(suma_b +suma_l)
+        return suma_b +suma_l
         pass
     
     def distancia_entre_puntos(self, x1, y1, x2, y2):
