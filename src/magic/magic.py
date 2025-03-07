@@ -1,3 +1,4 @@
+import math
 class Magic:
     """
     Clase con métodos para juegos matemáticos, secuencias especiales y algoritmos numéricos.
@@ -157,6 +158,8 @@ class Magic:
         Returns:
             int: El máximo común divisor de a y b
         """
+        
+        return math.gcd(a, b)
         pass
     
     def mcm(self, a, b):
@@ -170,6 +173,8 @@ class Magic:
         Returns:
             int: El mínimo común múltiplo de a y b
         """
+    
+        return abs(a*b)//math.gcd(a, b)
         pass
     
     def suma_digitos(self, n):
