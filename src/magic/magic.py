@@ -140,6 +140,10 @@ class Magic:
         Returns:
             int: El factorial de n
         """
+        if n == 0 or n == 1:
+            return 1
+        return n*self.factorial(n-1)
+
         pass
     
     def mcd(self, a, b):
