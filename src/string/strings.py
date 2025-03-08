@@ -86,6 +86,11 @@ class Strings:
         Returns:
             bool: True si son anagramas, False en caso contrario
         """
+        filtro1 = sorted(c.lower() for c in texto1 if c.isalnum())
+        filtro2 = sorted(c.lower() for c in texto2 if c.isalnum())
+
+        return filtro1 == filtro2
+
         pass
     
     def contar_palabras(self, texto):
