@@ -14,6 +14,8 @@ class Strings:
         Returns:
             bool: True si es palíndromo, False en caso contrario
         """
+        texto_inv = ''.join(c.lower() for c in texto if c.isalnum())
+        return texto_inv == texto_inv[::-1]
         pass
     
     def invertir_cadena(self, texto):
