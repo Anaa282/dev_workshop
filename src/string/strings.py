@@ -116,6 +116,7 @@ class Strings:
         Returns:
             str: Cadena con la primera letra de cada palabra en mayúscula
         """
+        return texto.title()
         pass
     
     def eliminar_espacios_duplicados(self, texto):
