@@ -178,6 +178,19 @@ class Strings:
         Returns:
             str: Cadena cifrada
         """
+        if not texto:
+            return None
+        
+        cifrado = ""
+
+        for char in texto:
+            if char.isalpha():
+                if char.islower():
+                    cifrado += chr((ord(char) - ord("a") + 2) % 26 + ord("a"))
+                else:
+                    cifrado += chr((ord(char) - ord("A") + 2) % 26 + ord("A"))
+
+        return cifrado            
         pass
     
     def descifrar_cesar(self, texto, desplazamiento):
@@ -191,6 +204,23 @@ class Strings:
         Returns:
             str: Cadena descifrada
         """
+        if not texto:
+            return None
+        
+        descifrado = []
+
+        for char in texto:
+            if char.isalpha():
+                if char.islower():
+                    new = chr(((ord(char) - ord('a') - desplazamiento) % 26) + ord('a'))
+                else:
+                    new = chr(((ord(char) - ord('A') - desplazamiento) % 26) + ord('A'))
+            else:
+                new = char
+
+            descifrado.append(new) 
+
+        return "".join(descifrado)
         pass
     
     def encontrar_subcadena(self, texto, subcadena):
@@ -204,4 +234,13 @@ class Strings:
         Returns:
             list: Lista con las posiciones iniciales de cada ocurrencia
         """
+        posicion = []
+        l_texto = len(texto)
+        l_sub = len(subcadena)
+
+        for i in range(l_texto - l_sub + 1):
+            if texto[i:i + l_sub] == subcadena:
+                posicion.append(i)
+        return posicion        
+
         pass
